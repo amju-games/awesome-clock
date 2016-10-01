@@ -41,7 +41,7 @@ void Clock::setup()
     // Set up push button input pin
     pinMode(HARDWARE_PUSH_BUTTON_PIN, INPUT);
 
-    display.setUp();
+    m_display.setUp();
 
     setUpRtc();
 
@@ -80,7 +80,7 @@ void Clock::loop()
         digitalWrite(HARDWARE_BUZZER_PIN, LOW);
     }
 
-    display.adjustDisplayBrightness();
+    m_display.adjustDisplayBrightness();
 
     //    showScrollingText(loops);
 //    showStaticText();
