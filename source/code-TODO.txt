@@ -1,0 +1,30 @@
+Consistency: use camelCase - bitpattern uses _ style
+
+Wifi: yes, implement server allowing easy change of internet router details. 
+Then also implement client mode, so we can connect to internet and get date, time, weather etc.
+ - Can we run in server AND client mode??
+ - Set alarm: app sends http request to server, but we don't want to have to change wifi settings.
+   So put script on amju.com, clock polls it, or when we click button on clock.
+
+State pattern
+
+Display: 
+ - Time in fixed width format
+ - Push button to 
+    - snooze or stop alarm if it's on (long press to turn off, short press to snooze)
+    - if no alarm, change mode to scrolling display, showing
+       - date
+       - time
+       - alarm time, on or off
+       - weather: can use Met Office Datapoint
+       - current temp
+    
+
+    - update/set alarm: poll server when button clicked
+
+Multiple buttons? Depends how many IO pins are left on ESP board.
+3 buttons: prev/next/select? Have the buttons on top?
+Slide switch for alarm on/off?
+
+
+
