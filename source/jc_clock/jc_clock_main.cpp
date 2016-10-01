@@ -8,16 +8,17 @@
 // Max7219 library: tomek ness /FH-Potsdam / Feb 2007 http://design.fh-potsdam.de/ 
 // DS3231 real time clock library: Rtc by Makuna
 
+#include <Arduino.h>
 #include "clock.h"
 
 void setup()
 {
-    clock_setup();
+  Clock::instance()->setup();
 }
 
 
 void loop()
 {
-    clock_loop();
+  Clock::instance()->loop();
 }
 

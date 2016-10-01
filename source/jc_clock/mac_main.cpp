@@ -3,6 +3,8 @@
 // Jason Colman 2016
 //--------------------------------------------------------------------------------------------------
 
+#if defined(MACOSX)
+
 #include <iostream>
 
 #if defined(MACOSX)
@@ -39,3 +41,4 @@ std::cout << "Loop!\n";
   }
 }
 
+#endif

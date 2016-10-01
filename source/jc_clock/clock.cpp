@@ -10,7 +10,23 @@
 #include "display.h"
 #include "rtc.h"
 
-void clock_setup()
+Clock* Clock::instance()
+{
+  static Clock c;
+  return &c;
+}
+
+Clock::Clock()
+{
+  m_state = ClockStateStaticTime::instance();
+}
+
+Display* Clock::getDisplay()
+{
+  return &m_display;
+}
+
+void Clock::setup()
 {
     Serial.begin(57600);
 
@@ -43,9 +59,9 @@ void clock_setup()
 //    Serial.println(buf);
 }
 
-void clock_loop()
+void Clock::loop()
 {
-//    m_state->loop();
+    m_state->loop();
 
     // TODO TEMP TEST
     // Buzzer test
